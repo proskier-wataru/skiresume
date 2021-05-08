@@ -21,11 +21,22 @@
 /* /* .main-visualのCSS */
 .main-visual {
   position: relative;
+  margin-bottom: -4px;
 }
 .img-top {
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* BTNに関するCSS */
@@ -129,7 +140,7 @@ a.btn-c:hover {
   width: 95%;
   display: flex;
   justify-content: space-between;
-  background-color: plum;
+  /* background-color: plum; */
   position: relative;
   /* top: 50%; */
   left: 50%;
@@ -183,12 +194,50 @@ h3 {
   margin: 30px;
 }
 /* おすすめゾーンのCSS */
-.recommend-content {
-  height: 500px; /* ここの高さはいくつでも構いません */
-}
 .recommend-area {
-  max-width: 500px;
+  background: -moz-linear-gradient(top, #fff, #f4ebdd);
+  background: -webkit-linear-gradient(top, #fff, #f4ebdd);
+  background: linear-gradient(to bottom, #fff, #f4ebdd);
+  margin: 0 auto;
+  width: 100%;
 }
+.recommend-content {
+  height: auto; /* ここの高さはいくつでも構いません */
+  max-width: 600px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.theTarget {
+  text-align: center;
+  position: relative;
+  width: 75%;
+  padding-top: 56.25%;
+}
+iframe {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 90% !important;
+  height: 90% !important;
+}
+
+/* 参考https://h2ham.net/youtube-responsive/ */
+
+footer {
+  background-color: black;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.footer-area {
+  color: white;
+  font-size: 16px;
+}
+
 /* ★★★★タブレット縦置きサイズ（425px）以下の際に適用される設定 */
 @media screen and (max-width: 768px) {
   /* 共通 */
@@ -196,16 +245,20 @@ h3 {
     width: 100%;
     display: block;
     /* justify-content: space-between; */
-    background-color: plum;
+    /* background-color: plum; */
   }
   .content-bottom {
     width: 100%;
     display: block;
     /* justify-content: space-between; */
-    background-color: plum;
+    /* background-color: plum; */
   }
   .icons {
     width: 50px;
+  }
+  .icons:hover {
+    width: 55px;
+    transition: 0.4s;
   }
 
   .box1,
@@ -219,7 +272,16 @@ h3 {
     transform: translate(-50%, 0%);
   }
 
+  .box1,
+  .box3 {
+    background-color: #e4dcd9;
+  }
+  .box2,
+  .box4 {
+    background-color: #e6e8bb;
+  }
+
   .recommend-area {
-    max-width: 375px;
+    max-width: 100%;
   }
 }
